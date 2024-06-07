@@ -138,7 +138,7 @@ public class C05LoopStatements {
 ////        라벨문
 //        loop1 :
 //        for(int i = 1; i <= 5; i++){
-//            boolean test = false;
+//            //boolean test = false;
 //            for(int j = 0; j < 5; j++) {
 //                System.out.println("Hello World");
 //                if(j == 2) {
