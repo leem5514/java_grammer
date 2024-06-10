@@ -284,14 +284,23 @@ public class C06String {
 //        }
 //        System.out.println(sb3);
 
-//
-//        // (실습) 프로그래머스 -  문자열 밀기
-//        String A = "hello";
-//        String B = "ohell";
-//        int answer = 0;
 
+//        // (실습) 프로그래머스 -  문자열 밀기
+//        String A;
+//        String B;
+//        int answer = 0;
+//        String copy = A;
+//
+//        for (int i = 0; i < A.length(); i++) {
+//            if (copy.equals(B)) {
+//                return answer;
+//            }
+//            String a = copy.substring(copy.length() - 1);
+//            copy = a + copy.substring(0, copy.length() - 1);
+//            answer++;
+//       }
+//       return -1;
 
 
     }
-
 }
