@@ -98,7 +98,7 @@ public class C09Map {
 
 
 
-        // (실습) 프로그래머스 - 의상
+//        // (실습) 프로그래머스 - 의상
 //        String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
 //        Map<String, String> temp = new HashMap<>();
 //        for(int i = 0 ; i < clothes.length; i++) {
@@ -109,7 +109,7 @@ public class C09Map {
 //        int answer = 0;
 //        return answer;
 
-        // LinkedHashMap : 데이터 삽입순서 유지
+//        // LinkedHashMap : 데이터 삽입순서 유지
 //        Map<String, Integer> linkedMap = new LinkedHashMap<>();
 //        linkedMap.put("hello5", 1);
 //        linkedMap.put("hello4", 1);
@@ -128,31 +128,20 @@ public class C09Map {
 //        System.out.println(treeMap);
 
 //        // (실습) 프로그래머스 - 문자열 내 마음대로 정렬하기
-        String[] strings = {"abce", "abcd", "cdx"};
+//        String[] strings = {"abce", "abcd", "cdx"};
 //        String[] strings = {"sun", "bed", "car"};
-        int n = 2;
+//        int n = 2;
 //        int n = 1;
-
-//        String[] divide = new String[strings.length];
-//        for(int i = 0; i < strings.length; i++) {
-//            divide[i] = strings[i].substring(n-1,n);
-//        }
-//        Arrays.sort(divide);
+//        Map<String, String> tree = new TreeMap<>();
 //
-//        System.out.println(Arrays.toString(divide));
-        Map<String, String> tree = new TreeMap<>();
-
-        for (String s : strings) {
-            tree.put(s.charAt(n) + s, s);
-        }
-
-        String[] answer = new String[strings.length];
-        int index = 0;
-        for (String s : tree.values()) {
-            answer[index++] = s;
-        }
-
-
-
+//        for (String s : strings) {
+//            tree.put(s.charAt(n) + s, s);
+//        }
+//
+//        String[] answer = new String[strings.length];
+//        int index = 0;
+//        for (String s : tree.values()) {
+//            answer[index++] = s;
+//        }
     }
 }

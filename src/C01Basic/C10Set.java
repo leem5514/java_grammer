@@ -65,6 +65,7 @@ public class C10Set {
 //        //set1.remove(set2); // 차집합
 //
 //        // (참고)관련문제 : 뉴스 클러시터링
+
 //        System.out.println(set1);
 
 //        //LinkedHashSet, TreeSet
@@ -75,22 +76,20 @@ public class C10Set {
 //        mySet.add("hello1");
 //        System.out.println(mySet);
 
-        // (실습) 두개 뽑아서 더하기
-        int[] numbers = {2,1,3,4,1};
-        Set<Integer> temp = new TreeSet<>();
-
-        for(int i = 0; i < numbers.length; i++) {
-            for (int j = i+1; j < numbers.length; j++) {
-                  temp.add(numbers[j] + numbers[i]);
-            }
-        }
-
+//        // (실습) 두개 뽑아서 더하기
+//        int[] numbers = {2,1,3,4,1};
+//        Set<Integer> temp = new TreeSet<>();
+//
+//        for(int i = 0; i < numbers.length; i++) {
+//            for (int j = i+1; j < numbers.length; j++) {
+//                  temp.add(numbers[j] + numbers[i]);
+//            }
+//        }
 //        int[] answer = new int[temp.size()];
 //        for(n : temp.iterator()) {
 //
 //        }
 //        System.out.println(Arrays.toString(answer));
-
 
     }
 

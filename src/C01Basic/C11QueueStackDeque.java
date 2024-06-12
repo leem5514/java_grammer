@@ -1,9 +1,6 @@
 package C01Basic;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.ArrayBlockingQueue;
 
 public class C11QueueStackDeque {
@@ -35,20 +32,19 @@ public class C11QueueStackDeque {
 //        }
 //        long endTime2 = System.currentTimeMillis();
 //        System.out.println("Arraylist의 중간 삽입 : " + (endTime2 - startTime2)); // 실행시간 확인
-//
 //        long startTime3 = System.currentTimeMillis();
 //        for(int i = 0; i <100000; i++){
 //            list1.get(i);
 //        }
 //        long endTime3 = System.currentTimeMillis();
 //        System.out.println("linkedlist의 중간 조회 : " + (endTime3 - startTime3)); // 실행시간 확인
-//
 //        long startTime4 = System.currentTimeMillis();
 //        for(int i = 0; i <100000; i++){
 //            list2.get(i);
 //        }
 //        long endTime4 = System.currentTimeMillis();
 //        System.out.println("Arraylist의 중간 조회 : " + (endTime4 - startTime4)); // 실행시간 확인
+
 
         /*  queue */
 //        Queue<String> myQue = new LinkedList<>();
@@ -84,25 +80,93 @@ public class C11QueueStackDeque {
 //            System.out.println(pq.poll());
 //        }
 
-        int[] scoville = {1, 2, 3, 9, 10, 12};
-        int K = 7;
-        Queue<Integer> Squeue = new PriorityQueue<Integer>();
-        for (int i = 0; i < scoville.length; i++) {
-            Squeue.add(scoville[i]);
-        }
-        int count = 0;
-        while (Squeue.size() > 1 && Squeue.peek() < K) {
-            int a = Squeue.poll();
-            int b = Squeue.poll();
-            Squeue.add(a + 2 * b);
-            count++;
-        }
-        if (Squeue.peek() >= K) {
-            System.out.println(count);
-        } else {
-            System.out.println(-1);
-        }
+//        // (실습) 프로그래머스 - 더 맵게
+//        int[] scoville = {1, 2, 3, 9, 10, 12};
+//        int K = 7;
+//        Queue<Integer> Squeue = new PriorityQueue<Integer>();
+//        for (int i = 0; i < scoville.length; i++) {
+//            Squeue.add(scoville[i]);
+//        }
+//        int count = 0;
+//        while (Squeue.size() > 1 && Squeue.peek() < K) {
+//            int a = Squeue.poll();
+//            int b = Squeue.poll();
+//            Squeue.add(a + 2 * b);
+//            count++;
+//        }
+//        if (Squeue.peek() >= K) {
+//            System.out.println(count);
+//        } else {
+//            System.out.println(-1);
+//        }
 
+        /* stack */
+//        Stack<Integer> st1 = new Stack<>();
+//        st1.push(10);
+//        st1.push(20);
+//        st1.push(30);
+//        // pop : 스택에서 요소를 제거 후 해당 요소 반환
+//        System.out.println(st1.pop()); // 30
+//        System.out.println(st1.peek()); // 20
+//        System.out.println(st1.size());
+//        System.out.println(st1.isEmpty());
+//
+//        // String 객체 5개 정도 stack에 추가 후 while을 통해 출력
+//        Stack<String> st2 = new Stack<>();
+//        st2.push("Language");
+//        st2.push("is Old");
+//        st2.push("Java");
+//        st2.push("World");
+//        st2.push("Hello");
+//        while(!st2.isEmpty()) {
+//            System.out.print(st2.pop()+ " ");
+//        }
+
+        // (실습) 프로그래머스 - 같은 숫자는 싫어
+//        int[] arr = {1,1,3,3,0,1,1};
+//        int[] answer = new int[arr.length];
+//        Stack<Integer> st2 = new Stack<>();
+//        st2.push(arr[0]);
+//        for(int i = 1; i < arr.length; i++) {
+//            st2.push(arr[i]);
+//            if(arr[i] == arr[i-1]) {
+//                st2.pop();
+//            }
+//        }
+//        int count = 0;
+//        System.out.println(st2);
+
+        // (실습) 올바른 괄호
+//        boolean answer = true;
+//        Stack<String> stack = new Stack<>();
+//        for(int i = 0 ; i <s.length(); i++) {
+//            char c = s.charAt(i);
+//            if( c == '(') {
+//                stack.push(s);
+//            } else if(stack.isEmpty()) {
+//                answer = false;
+//                break;
+//            } else {
+//                stack.pop();
+//            }
+//        }
+//        if(!stack.isEmpty()) {
+//            answer = false;
+//        }
+//
+//        return answer;
+
+        /* deque */
+        Deque<Integer> dq = new ArrayDeque<>();
+        dq.addLast(10);
+        dq.addLast(20);
+        System.out.println(dq);
+        dq.addFirst(30);
+        System.out.println(dq);
+        System.out.println(dq.peekFirst());
+        System.out.println(dq.peekLast());
+        System.out.println(dq.pollFirst()); // poll
+        System.out.println(dq.pollLast()); // pop
 
     }
 }
