@@ -5,7 +5,7 @@ public class C0204MethodOverloading {
         C0204MethodOverloading obj = new C0204MethodOverloading();
         System.out.println(obj.sum(10,20));
     }
-
+    // 굳이 재귀함수를 사용해야 하는가?
     // 접근제어자를 안 붙이면 기본적으로 default 접근제어자 : 같은 패키지 내 에서만 유효
 
     int sum(int a, int b) {
