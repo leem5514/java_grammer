@@ -9,8 +9,10 @@ public class Author {
     private String name;
     private String email;
     private String password;
+    private static int static_id = 0;
 
     public Author(String name, String email, String password) {
+        this.id = ++static_id;
         this.name = name;
         this.email = email;
         this.password = password;

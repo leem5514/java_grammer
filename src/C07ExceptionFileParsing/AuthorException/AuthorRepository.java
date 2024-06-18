@@ -2,16 +2,19 @@ package C07ExceptionFileParsing.AuthorException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class AuthorRepository {
 
-    List<Author> authorList;
-    AuthorRepository() {
-        authorList = new ArrayList<Author>();
+
+    private final List<Author> authors = new ArrayList<>();
+
+    public void register(Author author) {
+        authors.add(author);
     }
 
-    void register(Author author) {
-        this.authorList.add(author);
+    public Optional<Author> findByEmail(String email) {
+        return authors.stream().filter(author -> author.getEmail().equals(email)).findFirst();
     }
 }
