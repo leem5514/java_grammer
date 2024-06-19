@@ -12,10 +12,11 @@ import java.util.Scanner;
 public class AuthorController {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         AuthorRepository authorRepository = new AuthorRepository();
         AuthorService authorService = new AuthorService(authorRepository);
         while (true) {
-            System.out.println("1.회원가입, 2. 로그인 3. 회원정보 조회");
+            System.out.println("1.회원가입, 2. 로그인 3. 회원정보 조회, 0 종룟");
             System.out.print("번호: ");
             int num = sc.nextInt();
             sc.nextLine();
