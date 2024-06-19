@@ -9,6 +9,7 @@ import java.util.Scanner;
 // 1) 회원가입 -> name, email, password 입력  -> 객체 생성 후 service 의 reigister 메서드 호출 -> service에서 author 객체 생성 -> repository호출 register완료(list 담기)
 // 1-1. 회원가입 예외처리 => service에서는 throw new 발생, controller try catch(동일 이메일 있는경우 , 비밀번호가 5자리 이하인 경우 등.)
 // 2) 로그인 : email, password 입력받아 service 의 login 메서드 호출 -> service에서 해당 email user가 있는지 검증(없으면 예외.)
+
 public class AuthorController {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,11 +30,11 @@ public class AuthorController {
                     System.out.print("Author Password: ");
                     String password = sc.nextLine();
                     authorService.register(name, email, password);
-                    System.out.println("회원가입이 성공적으로 완료되었습니다. 환영합니다, " + name + "님!");
+                    System.out.println(name +"님의 회원가입을 진심으로 환영합니다!");
                 } catch (NullPointerException e) {
                     System.out.println("빈 값은 사용하실 수 없으십니다.");
                 } catch (Exception e) {
-                    System.out.println("회원가입 실패: " + e.getMessage());
+                    System.out.println("회원가입 실패 : " + e.getMessage());
                 }
             }
             if (num == 2) {

@@ -8,13 +8,13 @@ import java.util.Scanner;
 public class AuthorRepository {
 
 
-    private final List<Author> authors = new ArrayList<>();
+    private final List<Author> authorList = new ArrayList<>();
 
     public void register(Author author) {
-        authors.add(author);
+        authorList.add(author);
     }
 
     public Optional<Author> findByEmail(String email) {
-        return authors.stream().filter(author -> author.getEmail().equals(email)).findFirst();
+        return authorList.stream().filter(author -> author.getEmail().equals(email)).findFirst();
     }
 }
