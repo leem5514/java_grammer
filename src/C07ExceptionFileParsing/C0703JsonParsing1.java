@@ -41,6 +41,8 @@ public class C0703JsonParsing1 {
         System.out.println(student3);
     }
 }
+// objectMapper 은 getter, setter 메서드 명을 통해서 필드값을 유추 (값 세팅은 아님.)
+// 실제 값 셋팅은 reflection 이라는 기술을 통해서 변수값에 할당
 class Student {
     private int id;
     private String name;

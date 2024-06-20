@@ -21,7 +21,7 @@ public class MainClass {
 //        new Thread(new Thread2()).start();
 //        new Thread(() -> System.out.println("익명 Runnable객체 주입 후 실행 Thread")).start();
 
-        // Thread 동시성 이슈 해결방법 2가지
+        /* Thread 동시성 이슈 해결방법 2가지 */
 //        for(int i = 0 ; i < 1000; i++) {
 //            Library.borrow();
 //        }

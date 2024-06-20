@@ -14,7 +14,6 @@ public class AuthorService {
     public AuthorService(AuthorRepository repository) {
         this.repository = repository;
     }
-
     public void register(String name, String email, String password) throws NoSuchFieldException, IllegalArgumentException{
         if (repository.findByEmail(email).isPresent()) {
             throw new IllegalArgumentException("이미 존재하는 이메일입니다.");
